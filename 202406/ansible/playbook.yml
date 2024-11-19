@@ -1,0 +1,16 @@
+---
+- hosts: localhost  # Ejecutar en la máquina local
+  connection: local  # Evitar usar SSH
+  gather_facts: yes  # Asegurarse de que se recojan los hechos del sistema
+
+  tasks:
+    - include_role:
+        name: 2do_parcial  # Ejecutar el rol 2do_parcial
+
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+
+
+
+

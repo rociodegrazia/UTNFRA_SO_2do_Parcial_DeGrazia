@@ -1,0 +1,125 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:45:26,935 p=4754 u=osboxes n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:45:27,173 p=4754 u=osboxes n=ansible | PLAY [all] ************************************************************************************************************************************************************
+2024-11-18 18:45:27,183 p=4754 u=osboxes n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************
+2024-11-18 18:45:27,213 p=4754 u=osboxes n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-11-18 18:45:29,167 p=4754 u=osboxes n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-18 18:45:29,167 p=4754 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:45:29,175 p=4754 u=osboxes n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************************************
+2024-11-18 18:45:29,202 p=4754 u=osboxes n=ansible | included: 2do_parcial for localhost
+2024-11-18 18:45:29,209 p=4754 u=osboxes n=ansible | TASK [2do_parcial : Crear directorios] ********************************************************************************************************************************
+2024-11-18 18:45:29,498 p=4754 u=osboxes n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:45:29,677 p=4754 u=osboxes n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:45:29,685 p=4754 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de alumno] ****************************************************************************************************************
+2024-11-18 18:45:30,226 p=4754 u=osboxes n=ansible | changed: [localhost]
+2024-11-18 18:45:30,233 p=4754 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de equipo] ****************************************************************************************************************
+2024-11-18 18:45:30,275 p=4754 u=osboxes n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: int object has no element 0
+2024-11-18 18:45:30,275 p=4754 u=osboxes n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: int object has no element 0"}
+2024-11-18 18:45:30,276 p=4754 u=osboxes n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2024-11-18 18:45:30,276 p=4754 u=osboxes n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:45:30,276 p=4754 u=osboxes n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:48:21,964 p=5000 u=osboxes n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:48:22,116 p=5000 u=osboxes n=ansible | PLAY [all] ************************************************************************************************************************************************************
+2024-11-18 18:48:22,122 p=5000 u=osboxes n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************
+2024-11-18 18:48:22,144 p=5000 u=osboxes n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-11-18 18:48:23,056 p=5000 u=osboxes n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-18 18:48:23,056 p=5000 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:48:23,063 p=5000 u=osboxes n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************************************
+2024-11-18 18:48:23,090 p=5000 u=osboxes n=ansible | included: 2do_parcial for localhost
+2024-11-18 18:48:23,096 p=5000 u=osboxes n=ansible | TASK [2do_parcial : Crear directorios] ********************************************************************************************************************************
+2024-11-18 18:48:23,376 p=5000 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:48:23,547 p=5000 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:48:23,557 p=5000 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de alumno] ****************************************************************************************************************
+2024-11-18 18:48:24,008 p=5000 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:48:24,014 p=5000 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de equipo] ****************************************************************************************************************
+2024-11-18 18:48:24,054 p=5000 u=osboxes n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: int object has no element 0
+2024-11-18 18:48:24,054 p=5000 u=osboxes n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: int object has no element 0"}
+2024-11-18 18:48:24,055 p=5000 u=osboxes n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2024-11-18 18:48:24,055 p=5000 u=osboxes n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:48:24,055 p=5000 u=osboxes n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:50:03,932 p=5227 u=osboxes n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:50:04,085 p=5227 u=osboxes n=ansible | PLAY [all] ************************************************************************************************************************************************************
+2024-11-18 18:50:04,090 p=5227 u=osboxes n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************
+2024-11-18 18:50:04,134 p=5227 u=osboxes n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-11-18 18:50:05,028 p=5227 u=osboxes n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-18 18:50:05,028 p=5227 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:50:05,035 p=5227 u=osboxes n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************************************
+2024-11-18 18:50:05,063 p=5227 u=osboxes n=ansible | included: 2do_parcial for localhost
+2024-11-18 18:50:05,069 p=5227 u=osboxes n=ansible | TASK [2do_parcial : Crear directorios] ********************************************************************************************************************************
+2024-11-18 18:50:05,384 p=5227 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:50:05,555 p=5227 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:50:05,567 p=5227 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de alumno] ****************************************************************************************************************
+2024-11-18 18:50:06,009 p=5227 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:50:06,016 p=5227 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de equipo] ****************************************************************************************************************
+2024-11-18 18:50:06,055 p=5227 u=osboxes n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: int object has no element 0
+2024-11-18 18:50:06,055 p=5227 u=osboxes n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: int object has no element 0"}
+2024-11-18 18:50:06,056 p=5227 u=osboxes n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2024-11-18 18:50:06,056 p=5227 u=osboxes n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:50:06,056 p=5227 u=osboxes n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:54:46,113 p=5468 u=osboxes n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:54:46,277 p=5468 u=osboxes n=ansible | PLAY [localhost] ******************************************************************************************************************************************************
+2024-11-18 18:54:46,283 p=5468 u=osboxes n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************
+2024-11-18 18:54:47,196 p=5468 u=osboxes n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-18 18:54:47,196 p=5468 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:54:47,203 p=5468 u=osboxes n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************************************
+2024-11-18 18:54:47,226 p=5468 u=osboxes n=ansible | included: 2do_parcial for localhost
+2024-11-18 18:54:47,234 p=5468 u=osboxes n=ansible | TASK [2do_parcial : Crear directorios] ********************************************************************************************************************************
+2024-11-18 18:54:47,541 p=5468 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:54:47,722 p=5468 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:54:47,730 p=5468 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de alumno] ****************************************************************************************************************
+2024-11-18 18:54:48,186 p=5468 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:54:48,194 p=5468 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de equipo] ****************************************************************************************************************
+2024-11-18 18:54:48,236 p=5468 u=osboxes n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: int object has no element 0
+2024-11-18 18:54:48,236 p=5468 u=osboxes n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: int object has no element 0"}
+2024-11-18 18:54:48,237 p=5468 u=osboxes n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2024-11-18 18:54:48,237 p=5468 u=osboxes n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:56:46,112 p=5702 u=osboxes n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:56:46,272 p=5702 u=osboxes n=ansible | PLAY [localhost] ******************************************************************************************************************************************************
+2024-11-18 18:56:46,278 p=5702 u=osboxes n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************
+2024-11-18 18:56:47,198 p=5702 u=osboxes n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-18 18:56:47,198 p=5702 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:56:47,206 p=5702 u=osboxes n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************************************
+2024-11-18 18:56:47,230 p=5702 u=osboxes n=ansible | included: 2do_parcial for localhost
+2024-11-18 18:56:47,238 p=5702 u=osboxes n=ansible | TASK [2do_parcial : Crear directorios] ********************************************************************************************************************************
+2024-11-18 18:56:47,558 p=5702 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:56:47,748 p=5702 u=osboxes n=ansible | ok: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:56:47,758 p=5702 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de alumno] ****************************************************************************************************************
+2024-11-18 18:56:48,209 p=5702 u=osboxes n=ansible | ok: [localhost]
+2024-11-18 18:56:48,216 p=5702 u=osboxes n=ansible | TASK [2do_parcial : Copiar archivo de datos de equipo] ****************************************************************************************************************
+2024-11-18 18:56:48,670 p=5702 u=osboxes n=ansible | changed: [localhost]
+2024-11-18 18:56:48,684 p=5702 u=osboxes n=ansible | TASK [Otra tarea] *****************************************************************************************************************************************************
+2024-11-18 18:56:48,698 p=5702 u=osboxes n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:56:48,700 p=5702 u=osboxes n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2024-11-18 18:56:48,700 p=5702 u=osboxes n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
